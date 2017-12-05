@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack",
-    "dev": "webpack-dev-server --open --hot --port 8081",
+    "dev": "webpack-dev-server --open  --port 8081",
     "build": "set NODE_ENV=production&&webpack --config ./webpack.production.config.js --progress"
   },
   "author": "",
@@ -25,6 +25,7 @@
     "html-webpack-plugin": "^2.30.1",
     "postcss-loader": "^2.0.6",
     "style-loader": "^0.18.2",
+    "url-loader": "^0.6.2",
     "vue-loader": "^13.5.0",
     "vue-template-compiler": "^2.5.9",
     "webpack": "^3.6.0",
@@ -32,6 +33,7 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
+    "element-ui": "^1.4.12",
     "vue": "^2.5.9",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"

@@ -8,7 +8,7 @@ module.exports = {
     entry: __dirname + "/src/main.js",//已多次提及的唯一入口文件
     output: {
         //path: __dirname + "/public",//打包后的文件存放的地方
-        path: __dirname + "/build",
+        path: __dirname + "/dist",
         filename: "bundle-[hash].js"//打包后输出文件的文件名
     },
     devtool: 'eval-source-map',
@@ -44,15 +44,20 @@ module.exports = {
                     {
                         loader: "style-loader"
                     }, {
-                        loader: "css-loader",
-                        options: {
-                            modules: true
-                        }
+                        loader: "css-loader"
                     }, {
                         loader: "postcss-loader"
                     }
 
                 ]
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+                loader: 'url-loader'
+            },
+            {
+                test: /\.(woff2?|woff|eot|ttf|otf)(\?.*)?$/,
+                loader: 'url-loader'
             }
         ]
     },
