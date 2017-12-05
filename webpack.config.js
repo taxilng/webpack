@@ -56,7 +56,7 @@ module.exports = {
                 loader: 'url-loader'
             },
             {
-                test: /\.(woff2?|woff|eot|ttf|otf)(\?.*)?$/,
+                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
                 loader: 'url-loader'
             }
         ]
